@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    /* weights: 200, 400, 600 */
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 8% 0 12% 0;
+}
+
+header {
+    width: 80vw;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 25px;
+    font-weight: 200;
+    color: hsl(229, 6%, 66%);
+    margin: 0 0 10px 0;
+}
+
+header h1 span {
+    font-weight: 600;
+    color: hsl(234, 12%, 34%)
+}
+
+header p {
+    font-weight: 200;
+    color: hsl(229, 6%, 66%)
+}
+
+main {
+    width: 80vw;
+    display: grid;
+    margin: 40px 0 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    row-gap: 24px;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 6px;
+    box-shadow: 
+    5px 6px 12px 2px hsl(211, 38%, 89%),
+    -5px 6px 12px 2px hsl(211, 38%, 89%);
+    height: 220px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h2 {
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 4px;
+}
+
+.card p {
+    font-weight: 200;
+    color: hsl(229, 6%, 66%);
+    font-size: 13px;
+}
+
+.super-visor {
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.karma {
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.calculator {
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-top: 40px;
+}
+
+footer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+a {
+    font-weight: 600;
+}
+
+@media (min-width: 1440px) {
+    header {
+        width: 33vw;
+    }
+
+    header h1{
+        font-size: 32px;
+        margin: 0 0 15px 0;
+    }
+
+    main {
+        justify-content: center;
+        grid-template-rows: repeat(4, 110px);
+        grid-template-columns: repeat(9, 100px);
+        gap: 16px 11px;
+        margin: 60px 0 0 0;
+    }
+
+    .card {
+        max-width: 300px;
+    }
+
+    .super-visor {
+        grid-area: 2 / 1 / span 2 / span 3;
+    }
+
+    .team-builder {
+        grid-area: 1 / 4 / span 2 / span 3;
+    }
+
+    .calculator {
+        grid-area: 2 / 7 / span 2 / span 3;
+    }
+
+    .karma {
+        grid-area: 3 / 4 / span 2 / span 3;
+    }
+}
